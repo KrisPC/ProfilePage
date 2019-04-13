@@ -2,65 +2,113 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/DarkBlue"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="366dp"
         android:layout_height="406dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="18dp">
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="293dp">
 
         <EditText
             android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@android:dimen/notification_large_icon_width"
             android:layout_weight="1"
+            android:background="@color/White"
+            android:clickable="true"
             android:ems="10"
             android:hint="Email"
             android:inputType="textEmailAddress"
+            android:textStyle="italic"
             tools:layout_editor_absoluteX="42dp"
             tools:layout_editor_absoluteY="347dp" />
+
 
         <EditText
             android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:autofillHints=""
+            android:background="@color/White"
+            android:clickable="true"
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword"
+            android:textStyle="italic"
             tools:layout_editor_absoluteX="85dp"
             tools:layout_editor_absoluteY="406dp" />
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyle"
+        <Button
+            android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            tools:layout_editor_absoluteX="182dp"
-            tools:layout_editor_absoluteY="164dp" />
+            android:text="Log In" />
 
-        <TextView
-            android:id="@+id/loginTextView"
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="45dp"
+            android:layout_weight="1" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="102dp"
             android:layout_weight="1"
-            android:text="Login"
-            tools:layout_editor_absoluteX="134dp"
-            tools:layout_editor_absoluteY="259dp" />
+            android:visibility="visible" />
 
         <TextView
             android:id="@+id/signupTextView"
-            android:layout_width="match_parent"
+            android:layout_width="121dp"
             android:layout_height="36dp"
+            android:layout_marginLeft="130dp"
             android:layout_weight="1"
-            android:text="sign up"
+            android:background="@color/White"
+            android:clickable="true"
+            android:text="        sign up"
+            android:textStyle="italic"
             tools:layout_editor_absoluteX="134dp"
             tools:layout_editor_absoluteY="213dp" />
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="214dp"
+        android:layout_height="301dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@tools:sample/backgrounds/scenic[1]" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="41dp"
+        android:layout_height="35dp"
+        app:srcCompat="@drawable/ic_email_black_24dp"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="293dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_secure"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="392dp" />
 
 </android.support.constraint.ConstraintLayout>
